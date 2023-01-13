@@ -31,15 +31,13 @@ namespace DongFeng.Base
                     res.AsText("Not found");
                     return;
                 }
-                res.Headers.Add("Content-Disposition", $"attachment; filename={name}");
-                //res.Headers.Add ("filename", "myfile.txt");
+                res.Headers.Add("Content-Disposition", $"attachment; filename={name}");                
                 res.AsStream(req, new FileStream(fileName, FileMode.Open, FileAccess.Read));
             });
 
             Route.Add($"{baseUrl}/Launcher", (req, res, props) =>
             {
-                res.Headers.Add("Content-Disposition", "attachment; filename=Launcher.exe");
-                //res.Headers.Add ("filename", "myfile.txt");
+                res.Headers.Add("Content-Disposition", "attachment; filename=Launcher.exe");                
                 res.AsStream(req, new FileStream($"{LauncherPath}", FileMode.Open, FileAccess.Read));
             });
 
