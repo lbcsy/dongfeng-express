@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DongFeng.Base", "DongFeng.Base\DongFeng.Base.csproj", "{8EE38E79-C288-4AF8-9F7B-F0B3701F9AE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DongFeng.Base", "DongFeng.Base\DongFeng.Base.csproj", "{8EE38E79-C288-4AF8-9F7B-F0B3701F9AE8}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedLaunch", "SharedLaunch\SharedLaunch.shproj", "{D6D1816B-4309-4F40-9F25-5B53AEE11C0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,5 +23,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3BAE9978-CC42-4D11-B770-B5C3158A248C}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SharedLaunch\SharedLaunch.projitems*{d6d1816b-4309-4f40-9f25-5b53aee11c0b}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
