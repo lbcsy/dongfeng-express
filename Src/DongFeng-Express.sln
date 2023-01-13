@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DongFeng.Base", "DongFeng.B
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedLaunch", "SharedLaunch\SharedLaunch.shproj", "{D6D1816B-4309-4F40-9F25-5B53AEE11C0B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jellyfish", "JellyFish\Jellyfish.csproj", "{CF2F4A3C-5D7C-4AE1-A928-5826E387E9BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{8EE38E79-C288-4AF8-9F7B-F0B3701F9AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EE38E79-C288-4AF8-9F7B-F0B3701F9AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EE38E79-C288-4AF8-9F7B-F0B3701F9AE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF2F4A3C-5D7C-4AE1-A928-5826E387E9BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF2F4A3C-5D7C-4AE1-A928-5826E387E9BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF2F4A3C-5D7C-4AE1-A928-5826E387E9BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF2F4A3C-5D7C-4AE1-A928-5826E387E9BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
