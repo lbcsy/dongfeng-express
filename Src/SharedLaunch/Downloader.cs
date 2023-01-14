@@ -28,7 +28,7 @@ namespace DongFeng.Launcher
             var httpClient = new HttpClient();
             
 
-            using (var stream = await httpClient.GetStreamAsync($"http://{baseUrl}/Lib/{fileName}"))
+            using (var stream = await httpClient.GetStreamAsync($"http://{baseUrl}/Package/{fileName}"))
             {
                 using (var fileStream = new FileStream(fileName, FileMode.CreateNew))
                 {

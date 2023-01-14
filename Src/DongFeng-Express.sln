@@ -9,6 +9,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedLaunch", "SharedLaunc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jellyfish", "JellyFish\Jellyfish.csproj", "{CF2F4A3C-5D7C-4AE1-A928-5826E387E9BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DongFeng.Launcher", "DongFeng.Launcher\DongFeng.Launcher.csproj", "{01AE2AC2-6D12-46E7-90E0-F08A064C6EC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{CF2F4A3C-5D7C-4AE1-A928-5826E387E9BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF2F4A3C-5D7C-4AE1-A928-5826E387E9BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF2F4A3C-5D7C-4AE1-A928-5826E387E9BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01AE2AC2-6D12-46E7-90E0-F08A064C6EC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01AE2AC2-6D12-46E7-90E0-F08A064C6EC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01AE2AC2-6D12-46E7-90E0-F08A064C6EC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01AE2AC2-6D12-46E7-90E0-F08A064C6EC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -31,6 +37,7 @@ Global
 		SolutionGuid = {3BAE9978-CC42-4D11-B770-B5C3158A248C}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SharedLaunch\SharedLaunch.projitems*{01ae2ac2-6d12-46e7-90e0-f08a064c6ec7}*SharedItemsImports = 4
 		SharedLaunch\SharedLaunch.projitems*{d6d1816b-4309-4f40-9f25-5b53aee11c0b}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
