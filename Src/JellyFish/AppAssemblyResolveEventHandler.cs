@@ -16,6 +16,10 @@ namespace DongFeng.Jellyfish
         {
             BaseUrl = baseUrl;            
         }
+        public AppAssemblyResolveEventHandler() { 
+            // Should read base url from application's configuration, one option is via an DI which will be provided from
+            // the application
+        }
         public void Init()
         {
             AppDomain currentDomain = AppDomain.CurrentDomain;
