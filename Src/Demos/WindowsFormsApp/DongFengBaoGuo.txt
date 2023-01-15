@@ -1,0 +1,3 @@
+WindowsFormsApp.exe
+WindowsFormsApp.exe.config
+Jellyfish.dll
