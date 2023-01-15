@@ -15,6 +15,7 @@ namespace DongFeng.Base
         private void SetupRoutes()
         {
             var baseUrl = "/DongFeng-Express";
+            
             Route.Before = MyOnBefore;
             Route.Add($"{baseUrl}", (request, response, props) =>
             {
@@ -75,6 +76,11 @@ namespace DongFeng.Base
                 textBoxLauncherPath.Text = openFileDialog.FileName;
                 LauncherPath = openFileDialog.FileName;
             }
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

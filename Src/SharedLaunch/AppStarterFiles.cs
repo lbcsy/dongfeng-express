@@ -1,6 +1,9 @@
-﻿namespace DongFeng.Launcher
+﻿using System;
+
+namespace DongFeng.Launcher
 {
-    internal class AppStarterFiles
+    [Serializable]
+    public class AppStarterFiles
     {
         public string StartFile { get; set;}
         public string[] SupportFiles { get; set; } = new string[0];
