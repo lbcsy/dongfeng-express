@@ -1,5 +1,7 @@
 using SimpleHttp;
 using System.Net;
+using System.Security.Policy;
+using System.Web;
 
 namespace DongFeng.Base
 {
@@ -24,7 +26,7 @@ namespace DongFeng.Base
 
             Route.Add($"{baseUrl}/Package/{{name}}", (req, res, props) =>
             {
-                var name = props["name"];
+                var name = HttpUtility.UrlDecode(props["name"]);
                 var fileName = $"{RootPath}\\{name}";
                 if (!File.Exists(fileName))
                 {
