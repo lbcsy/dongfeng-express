@@ -1,6 +1,5 @@
 using SimpleHttp;
 using System.Net;
-using System.Security.Policy;
 using System.Web;
 
 namespace DongFeng.Base
@@ -14,10 +13,15 @@ namespace DongFeng.Base
 
         private string RootPath { get; set; } = ".";
         private string LauncherPath { get; set; } = @".\Laucher.exe";
+        private CancellationTokenSource _cancelTokenSource;
+        private int _port=8888;
         private void SetupRoutes()
         {
             var baseUrl = "/DongFeng-Express";
-            
+            // initialize cancellation objects
+            _cancelTokenSource = new CancellationTokenSource();
+            CancellationToken token = _cancelTokenSource.Token;
+
             Route.Before = MyOnBefore;
             Route.Add($"{baseUrl}", (request, response, props) =>
             {
@@ -44,7 +48,14 @@ namespace DongFeng.Base
                 res.AsStream(req, new FileStream($"{LauncherPath}", FileMode.Open, FileAccess.Read));
             });
 
-            HttpServer.ListenAsync(8888, CancellationToken.None, Route.OnHttpRequestAsync);
+            try
+            {
+                HttpServer.ListenAsync(_port, token, Route.OnHttpRequestAsync).WaitAsync(TimeSpan.FromSeconds(5));
+            }
+            catch (Exception ex)
+            {
+                textBox1.AppendText(ex.ToString());
+            }
         }
         public bool MyOnBefore(HttpListenerRequest request, HttpListenerResponse response)
         {
@@ -58,8 +69,7 @@ namespace DongFeng.Base
         private void Form1_Shown(object sender, EventArgs e)
         {
             textBoxBasePath.Text = RootPath;
-            folderBrowserDialog.InitialDirectory = AppContext.BaseDirectory;
-            SetupRoutes();
+            folderBrowserDialog.InitialDirectory = AppContext.BaseDirectory;            
         }
 
         private void buttonBase_Click(object sender, EventArgs e)
@@ -83,6 +93,28 @@ namespace DongFeng.Base
         private void FormMain_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            if (buttonStart.Text == "Start")
+            { 
+                buttonStart.Text = "Stop";
+                SetupRoutes();
+            }
+            else
+            {
+                if(buttonStart.Text == "Stop")
+                {
+                    _cancelTokenSource.Cancel(); 
+                    buttonStart.Text = "Start";                    
+                }
+            }
+        }
+
+        private void numericUpDownPort_ValueChanged(object sender, EventArgs e)
+        {
+            _port = decimal.ToInt32( numericUpDownPort.Value);
         }
     }
 }
