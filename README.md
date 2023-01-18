@@ -2,7 +2,7 @@
 
 #### Overview
 
-DongFeng Express is a tiny framework which can be used to deploy .Net desktop application without a need of complicate installer or updater, it is suitable for enterprise internal applications。
+DongFeng Express is a tiny framework which can be used to deploy .Net desktop application without a need of complicated installer or updater when running with Windows Sandbox, it downloads DLLs and resource files on demand, thus the application can be launched with a minimum set of files (as less as two files). It is suitable for enterprise internal applications。
 
 #### Framework Components
 
