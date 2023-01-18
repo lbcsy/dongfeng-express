@@ -8,8 +8,8 @@ DongFeng Express is a tiny framework which can be used to deploy .Net desktop ap
 
 DongFeng Express is consist of three components: 
 
-1.  Base: An simple Web API server based on Simple HTTP，you can download files of the application from it.
-2.  Launcher ：A Laucher.exe which you can download from Base via a browser，once it is executed, it starts to download the minimum files for the application to start (starter files).
+1.  Base: A simple Web API server based on Simple HTTP，you can download files of the application from it.
+2.  Launcher ：i.e. Laucher.exe, which you can download from Base via a browser，once it is executed, it starts to download the minimum files for the application to start (starter files).
 3.  Jellyfish.DLL: Provids an handler for resolving missing assemblies from Base, i.e., it downloads a DLL from Base if the DLL is missing from your application's folder
 
 
