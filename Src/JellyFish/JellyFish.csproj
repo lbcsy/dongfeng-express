@@ -2,11 +2,33 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>DongFeng.$(AssemblyName)</PackageId>
+    <Title>DongFeng Express Jellyfish</Title>
+    <Authors>Bo(b)</Authors>
+    <Company>Bo(b)</Company>
+    <Product>DongFeng Express</Product>
+    <Description>DongFeng Express is a tiny framework to deploy and execute WinForms application.
+DongFeng.Jellyfish is the library used in WinForms application to communicate with DongFeng Express Server (DongFeng.Base).</Description>
+    <PackageProjectUrl>https://github.com/lbcsy/dongfeng-express</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/lbcsy/dongfeng-express</RepositoryUrl>
+    <PackageTags>C#;WinForms;Desktop;Deploy</PackageTags>
+    <PackageReleaseNotes>First version</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Readme.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
